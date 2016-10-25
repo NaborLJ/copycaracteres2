@@ -27,11 +27,10 @@ public class Copycaracteres2 {
         
         BufferedReader read = new BufferedReader(new FileReader("texto10.txt"));
         PrintWriter write = new PrintWriter("texto11.txt");
-        String aux="";
-        for(int i = 0;i<3;i++){
-        aux=read.readLine();
-        write.println(aux);
-        }
+        String aux;
+        while((aux = read.readLine()) != null){
+            write.println(aux);
+        }        
         read.close();
         write.close();
 
